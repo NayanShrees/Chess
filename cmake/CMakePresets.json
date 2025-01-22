@@ -1,0 +1,34 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "release",
+            "displayName": "Release",
+            "description": "Configuration for release",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/../build/${presetName}",
+            "toolchainFile": "${sourceDir}/toolchain.cmake",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_CXX_FLAGS": "-Wall -Wextra -O3"
+            }
+        },
+        {
+            "name": "development",
+            "inherits": "release",
+            "displayName": "Development",
+            "description": "Configuration for development",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "Debug;RelWithDebInfo",
+                "CMAKE_CXX_FLAGS": "-Wall -Wextra -Wpedantic -Og"
+            }
+        }
+
+    ]
+}
