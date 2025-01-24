@@ -11,8 +11,8 @@
             "displayName": "Release",
             "description": "Configuration for release",
             "generator": "Unix Makefiles",
-            "binaryDir": "${sourceDir}/../build/${presetName}",
-            "toolchainFile": "${sourceDir}/toolchain.cmake",
+            "binaryDir": "${sourceDir}/build/",
+            "toolchainFile": "${sourceDir}/cmake/toolchain.cmake",
             "cacheVariables": {
                 "CMAKE_CONFIGURATION_TYPES": "Release",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",

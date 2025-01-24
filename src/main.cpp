@@ -1,3 +1,9 @@
-#include <iostream>
+#include "ChessEngine/ChessEngine.hpp"
+#include "ChessLib/ChessLib.hpp"
+#include <GLFW/glfw3.h>
 
-int main() { std::cout << "Hello World!" << std::endl; }
+int main() {
+  ChessEngine engine = ChessEngine();
+  ChessLib chess = ChessLib();
+  chess.PrintBoard();
+}
