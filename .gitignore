@@ -36,3 +36,6 @@ build
 
 # Cache folder
 .cache
+
+# Python Virtual Environment
+.venv

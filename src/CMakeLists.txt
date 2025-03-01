@@ -9,13 +9,13 @@ set(SOURCES
 add_executable(${TARGET_APP} ${SOURCES})
 target_include_directories(${TARGET_APP} PRIVATE ${INCLUDE_DIR})
 
-
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(${TARGET_APP}
     ChessEngine
     ChessLib
     glfw
+    glad
     OpenGL::GL
 )
 
