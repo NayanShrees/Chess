@@ -7,28 +7,54 @@
     },
     "configurePresets": [
         {
-            "name": "release",
-            "displayName": "Release",
-            "description": "Configuration for release",
+            "name": "linux-debug",
+            "displayName": "Linux Debug",
+            "description": "Configuration for debug on Linux",
             "generator": "Unix Makefiles",
-            "binaryDir": "${sourceDir}/build/",
-            "toolchainFile": "${sourceDir}/cmake/toolchain.cmake",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "toolchainFile": "${sourceDir}/cmake/toolchain-linux.cmake",
+            "cacheVariables": {
+                "CMAKE_CONFIGURATION_TYPES": "Debug;RelWithDebInfo",
+                "CMAKE_CXX_FLAGS": "-Wall -Wextra -Wpedantic -Og",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        },
+        {
+            "name": "linux-release",
+            "inherits": "linux-debug",
+            "displayName": "Linux Release",
+            "description": "Configuration for release on Linux",
             "cacheVariables": {
                 "CMAKE_CONFIGURATION_TYPES": "Release",
-                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
                 "CMAKE_CXX_FLAGS": "-Wall -Wextra -O3"
             }
         },
         {
-            "name": "development",
-            "inherits": "release",
-            "displayName": "Development",
-            "description": "Configuration for development",
+            "name": "windows-debug",
+            "inherits": "linux-debug",
+            "displayName": "Windows Debug",
+            "description": "Configuration for debug on Windows",
+            "generator": "Visual Studio 17 2022",
+            "toolchainFile": "${sourceDir}/cmake/toolchain-windows.cmake",
             "cacheVariables": {
-                "CMAKE_CONFIGURATION_TYPES": "Debug;RelWithDebInfo",
-                "CMAKE_CXX_FLAGS": "-Wall -Wextra -Wpedantic -Og"
+                "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS": "TRUE",
+                "BUILD_SHARED_LIBS": "TRUE",
+                "LIBRARY_OUTPUT_PATH": "${binaryDir}"
             }
-        }
+        },
+        {
+            "name": "windows-release",
+            "inherits": "linux-release",
+            "displayName": "Windows Release",
+            "description": "Configuration for release on Windows",
+            "generator": "Visual Studio 17 2022",
+            "toolchainFile": "${sourceDir}/cmake/toolchain-windows.cmake",
+            "cacheVariables": {
+                "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS": "TRUE",
+                "BUILD_SHARED_LIBS": "TRUE",
+                "LIBRARY_OUTPUT_PATH": "${binaryDir}"
+            }
 
+        }
     ]
 }

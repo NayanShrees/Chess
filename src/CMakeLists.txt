@@ -1,4 +1,5 @@
 set(TARGET_APP Chess)
+set(TARGET_APP ${TARGET_APP} PARENT_SCOPE)
 
 set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/../include)
 
