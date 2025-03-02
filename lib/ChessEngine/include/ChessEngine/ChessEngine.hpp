@@ -2,9 +2,9 @@
 #define CHESSENGINE_HPP_
 
 class ChessEngine {
-public:
-  ChessEngine();
-  ~ChessEngine();
+   public:
+    ChessEngine();
+    ~ChessEngine();
 };
 
-#endif // CHESSENGINE_HPP_
+#endif  // CHESSENGINE_HPP_

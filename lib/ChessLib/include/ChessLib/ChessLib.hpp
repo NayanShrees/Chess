@@ -2,10 +2,10 @@
 #define CHESSLIB_HPP_
 
 class ChessLib {
-public:
-  ChessLib();
-  ~ChessLib();
-  void PrintBoard();
+   public:
+    ChessLib();
+    ~ChessLib();
+    void PrintBoard();
 };
 
-#endif // CHESSLIB_HPP_
+#endif  // CHESSLIB_HPP_
