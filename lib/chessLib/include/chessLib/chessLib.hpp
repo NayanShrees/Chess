@@ -1,5 +1,5 @@
-#ifndef CHESSLIB_HPP_
-#define CHESSLIB_HPP_
+#ifndef CHESS_LIB_HPP_
+#define CHESS_LIB_HPP_
 
 class ChessLib {
    public:
@@ -8,4 +8,4 @@ class ChessLib {
     void PrintBoard();
 };
 
-#endif  // CHESSLIB_HPP_
+#endif  // CHESS_LIB_HPP_

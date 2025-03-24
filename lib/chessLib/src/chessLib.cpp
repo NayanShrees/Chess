@@ -1,6 +1,6 @@
-#include "ChessLib/ChessLib.hpp"
-
 #include <iostream>
+
+#include "chessLib/chessLib.hpp"
 
 ChessLib::ChessLib() { std::cout << "Initialising Chess Library" << std::endl; }
 

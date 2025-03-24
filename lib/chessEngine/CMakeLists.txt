@@ -3,7 +3,7 @@ set(CHESS_ENGINE ChessEngine)
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/ChessEngine.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/chessEngine.cpp
 )
 
 add_library(${CHESS_ENGINE} SHARED ${SOURCES})

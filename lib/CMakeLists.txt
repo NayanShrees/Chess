@@ -1,6 +1,6 @@
-add_subdirectory(ChessEngine)
+add_subdirectory(chessEngine)
 
-add_subdirectory(ChessLib)
+add_subdirectory(chessLib)
 
 add_subdirectory(glfw)
 

@@ -1,6 +1,6 @@
-#include "ChessEngine/ChessEngine.hpp"
-
 #include <iostream>
+
+#include "chessEngine/chessEngine.hpp"
 
 ChessEngine::ChessEngine() { std::cout << "Initialising Chess Engine" << std::endl; }
 
