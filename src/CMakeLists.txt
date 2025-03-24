@@ -1,9 +1,10 @@
 set(TARGET_APP Chess)
 
-set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/../include)
+set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/include)
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/window.cpp
 )
 
 add_executable(${TARGET_APP} ${SOURCES})
