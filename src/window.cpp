@@ -50,8 +50,19 @@ int Window::Init(int height, int width, const char* windowName) {
 int Window::Play() {
     std::cout << "Playing Window" << std::endl;
     while (!glfwWindowShouldClose(this->window_)) {
+        this->ProcessInput();
+
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
         glfwSwapBuffers(this->window_);
         glfwPollEvents();
     }
     return 0;
+}
+
+void Window::ProcessInput() {
+    if (glfwGetKey(this->window_, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        glfwSetWindowShouldClose(this->window_, true);
+    }
 }

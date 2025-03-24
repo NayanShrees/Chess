@@ -16,5 +16,7 @@ class Window {
     GLFWwindow* window_;
     int height_;
     int width_;
+
+    void ProcessInput();
 };
 #endif  // WINDOW_HPP_
